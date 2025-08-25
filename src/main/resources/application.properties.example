@@ -1,0 +1,40 @@
+spring.application.name=
+#Groq config from spring docs
+spring.ai.openai.api-key=
+spring.ai.openai.base-url=https://api.groq.com/openai
+
+spring.ai.openai.chat.options.model=llama-3.1-8b-instant
+# limit 6000
+#spring.ai.openai.chat.options.model=qwen/qwen3-32b
+# limit : 6000
+#spring.ai.openai.chat.options.model=deepseek-r1-distill-llama-70b
+#limit 6000
+
+#spring.ai.openai.chat.options.model=meta-llama/llama-4-maverick-17b-128e-instruct
+#spring.ai.openai.chat.options.model=llama-3.3-70b-versatile
+#spring.ai.openai.chat.model=llama3-70b-8192
+
+# Server Configuration
+server.port=8072
+
+# Logging Configuration
+logging.level.ROOT=info
+logging.file.name=./ai-agent-template.log
+
+# Spring AI Configuration
+spring.ai.retry.on-client-errors=true
+
+# MCP Client Configuration / sse and stdio transport
+spring.ai.mcp.client.sse.connections.smtp-email-server.url=http://localhost:45450/sse
+spring.ai.mcp.client.stdio.servers-configuration=classpath:mcp-servers.json
+
+spring.ai.mcp.client.enabled=true
+spring.ai.mcp.client.toolcallback.enabled=true
+
+# D�sactive le pr�fixage automatique des noms d'outils
+spring.ai.mcp.client.tool.name-prefix-enabled=false
+
+#activez les logs d�taill�s
+logging.level.org.springframework.ai=DEBUG
+logging.level.io.modelcontextprotocol=TRACE
+

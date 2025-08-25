@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "mcp-server-fetch-typescript": {
+      "command": "node",
+      "args": [
+        "C:\\Users\\rayen\\Desktop\\mcp-server-fetch-typescript\\build\\index.js"
+      ]
+    }
+  }
+}
